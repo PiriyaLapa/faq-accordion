@@ -18,6 +18,7 @@ function App() {
         >
           Learn React
         </a>
+        <h1>faq-accordion project</h1>
       </header>
     </div>
   );
