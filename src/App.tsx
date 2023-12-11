@@ -1,7 +1,7 @@
 
 import {Component} from 'react';
 import { Container, Header } from './components/StyleComponents';
-import { Card } from './components/CardComponent';
+import { AccordionCard } from './components/AccordionCard';
 import VectorLine from './components/VectorComponent';
 export default class App extends Component {
   render(){
@@ -11,7 +11,7 @@ export default class App extends Component {
         <Header>
           <VectorLine />
         </Header>
-        <Card />
+        <AccordionCard />
       </Container>
     )
   }
