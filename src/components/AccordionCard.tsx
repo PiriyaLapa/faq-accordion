@@ -38,8 +38,8 @@ export class AccordionCard extends Component<
     const { openIndex } = this.state;
     return (
       <AccordionContainer>
-        <h1>FAQ Container</h1>
-        <p>we are doing....</p>
+        <h1>FAQ Container hello we are doing</h1>
+        {/* <p>we are doing....</p> */}
         {/* {items.map((item, index) => {
           <AccordionItem key={index}>
             <AccordionHeader>{item.question}</AccordionHeader>
