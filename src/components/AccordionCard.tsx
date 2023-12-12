@@ -12,9 +12,34 @@ export const AccordionContainer = styled.div`
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 `;
 
+const AccordionItem = styled.div`
+  border: 1px solid #ddd;
+  margin-bottom: 8px;
+`;
+
+const AccordionHeader = styled.div`
+  padding: 10px;
+  background-color: #f1f1f1;
+  font-weight: bold;
+  cursor: pointer;
+`;
+const AccordionContent = styled.div<{ isOpen: boolean }>`
+  padding: 10px;
+  display: ${({ isOpen }: { isOpen: boolean }) => (isOpen ? "block" : "none")};
+`;
+
+const Panel = styled.div`
+  position: relative;
+  top: 100px;
+  width: 100%;
+  height: auto;
+  background-color: red;
+`;
+
 interface AccordionProps {
   items: FAQItem[];
 }
+
 
 export class AccordionCard extends Component<
   AccordionProps,
@@ -27,7 +52,7 @@ export class AccordionCard extends Component<
     };
   }
 
-  toglegerAccordion = (index: number) => {
+  toggleAccordion = (index: number) => {
     this.setState((prevState) => ({
       openIndex: prevState.openIndex === index ? null : index,
     }));
@@ -38,16 +63,18 @@ export class AccordionCard extends Component<
     const { openIndex } = this.state;
     return (
       <AccordionContainer>
-        <h1>FAQ Container hello we are doing</h1>
-        {/* <p>we are doing....</p> */}
-        {/* {items.map((item, index) => {
-          <AccordionItem key={index}>
-            <AccordionHeader>{item.question}</AccordionHeader>
-            <AccordionContent isOpen={openIndex === index}>
-              {item.answer}
-            </AccordionContent>
-          </AccordionItem>;
-        })} */}
+        <div>
+          {items.map((item, index) => (
+            <AccordionItem key={index}>
+              <AccordionHeader onClick={() => this.toggleAccordion(index)}>
+                {item.question}
+              </AccordionHeader>
+              <AccordionContent isOpen={openIndex === index}>
+                {item.answer}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </div>
       </AccordionContainer>
     );
   }

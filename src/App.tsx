@@ -3,7 +3,7 @@ import {Component} from 'react';
 import { Container, Header } from './components/StyleComponents';
 import { AccordionCard } from './components/AccordionCard';
 import VectorLine from './components/VectorComponent';
-import { FAQdata } from './data/FAQData';
+import { faqData} from './data/FAQData';
 
 export default class App extends Component {
   render(){
@@ -12,7 +12,7 @@ export default class App extends Component {
         <Header>
           <VectorLine />
         </Header>
-        <AccordionCard items={FAQdata}/>
+        <AccordionCard items={faqData}/>
       </Container>
     )
   }
