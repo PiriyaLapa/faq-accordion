@@ -28,18 +28,16 @@ const AccordionContent = styled.div<{ isOpen: boolean }>`
   display: ${({ isOpen }: { isOpen: boolean }) => (isOpen ? "block" : "none")};
 `;
 
-const Panel = styled.div`
-  position: relative;
-  top: 100px;
+const PanelContainer = styled.div`
   width: 100%;
   height: auto;
-  background-color: red;
+  border-radius: 15px;
+
 `;
 
 interface AccordionProps {
   items: FAQItem[];
 }
-
 
 export class AccordionCard extends Component<
   AccordionProps,
@@ -63,7 +61,8 @@ export class AccordionCard extends Component<
     const { openIndex } = this.state;
     return (
       <AccordionContainer>
-        <div>
+        <PanelContainer>
+          <h1>faq accordion</h1>
           {items.map((item, index) => (
             <AccordionItem key={index}>
               <AccordionHeader onClick={() => this.toggleAccordion(index)}>
@@ -74,7 +73,7 @@ export class AccordionCard extends Component<
               </AccordionContent>
             </AccordionItem>
           ))}
-        </div>
+        </PanelContainer>
       </AccordionContainer>
     );
   }
