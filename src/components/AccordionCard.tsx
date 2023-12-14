@@ -1,6 +1,8 @@
 import { Component, ReactNode } from "react";
 import styled from "styled-components";
 import { FAQItem } from "../data/FAQData";
+import VectorHeader from "./VectorHeader";
+import { SmallSize} from "./StyleComponents";
 
 export const AccordionContainer = styled.div`
   width: 600px;
@@ -18,7 +20,7 @@ const AccordionItem = styled.div`
 `;
 
 const AccordionHeader = styled.div`
-  padding: 10px;
+  padding: 13px;
   background-color: #f1f1f1;
   font-weight: bold;
   cursor: pointer;
@@ -32,7 +34,19 @@ const PanelContainer = styled.div`
   width: 100%;
   height: auto;
   border-radius: 15px;
+  h1 {
+    font-style: normal;
+    font-family: "Work seri";
+    text-transform: uppercase;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 66px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
+    :nth-child(1) {
+      margin-right: 15px;
+    }
+  }
 `;
 
 interface AccordionProps {
@@ -62,7 +76,10 @@ export class AccordionCard extends Component<
     return (
       <AccordionContainer>
         <PanelContainer>
-          <h1>faq accordion</h1>
+          <h1>
+            <VectorHeader />
+            faq<SmallSize>s</SmallSize>
+          </h1>
           {items.map((item, index) => (
             <AccordionItem key={index}>
               <AccordionHeader onClick={() => this.toggleAccordion(index)}>

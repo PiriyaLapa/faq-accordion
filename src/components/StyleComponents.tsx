@@ -19,6 +19,10 @@ export const Header = styled(Container)`
   *{
     margin:0 auto;
     position:absolute
-    
+
   }
 `;
+
+export const SmallSize= styled.span`
+  font-size:.6em;
+`
