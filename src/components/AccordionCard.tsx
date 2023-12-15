@@ -6,9 +6,9 @@ import VectorHeader from "./VectorHeader";
 export const AccordionContainer = styled.div`
   width: 600px;
   height: 565px;
-  margin: 0 auto; 
-  position:relative;
-  top:-160px;
+  margin: 0 auto;
+  position: relative;
+  top: -160px;
   /* position: absolute;
   top: 60%;
   left: 50%; */
@@ -49,19 +49,19 @@ const PanelContainer = styled.div`
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin: 0px;
     display: inline-block;
-
-    :nth-child(1) {
-      margin: 5px 25px 5px 15px;
-    }
-
-    span {
-      margin: 0px;
-      font-size: 2rem;
-      position: absolute;
-      left: 125px;
-      top: 5px;
-    }
   }
+`;
+
+const PanelHeader = styled.div`
+  :nth-child(1){
+    margin:5px 25px 5px 15px;
+    font-size:2rem;
+  }
+  span{
+    position:relative;
+    left:-10%;
+  }
+
 `;
 
 interface AccordionProps {
@@ -90,12 +90,12 @@ export class AccordionCard extends Component<
     return (
       <AccordionContainer>
         <PanelContainer>
-          <div>
+          <PanelHeader>
             <VectorHeader />
             <h1>
               faq<span>s</span>
             </h1>
-          </div>
+          </PanelHeader>
           {items.map((item, index) => (
             <AccordionItem key={index}>
               <AccordionHeader onClick={() => this.toggleAccordion(index)}>

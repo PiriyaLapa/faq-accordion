@@ -3,8 +3,8 @@ export default class VectorHeader extends Component {
   render(): ReactNode {
     return (
         <svg
-          width="34"
-          height="33"
+          width="39"
+          height="38"
           viewBox="0 0 36 35"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"

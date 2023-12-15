@@ -11,7 +11,6 @@ export const Header = styled(Container)`
 
   * {
     margin: 0 auto;
-    position: absolute;
   }
 `;
 
