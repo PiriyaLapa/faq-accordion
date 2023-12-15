@@ -5,7 +5,8 @@ import VectorHeader from "./VectorHeader";
 
 export const AccordionContainer = styled.div`
   width: 600px;
-  height: 565px;
+  /* height: 565px; */
+  height:auto;
   margin: 0 auto;
   position: relative;
   top: -160px;
@@ -100,6 +101,7 @@ export class AccordionCard extends Component<
             <AccordionItem key={index}>
               <AccordionHeader onClick={() => this.toggleAccordion(index)}>
                 {item.question}
+                <button type="submit">button</button>
               </AccordionHeader>
               <AccordionContent $isOpen={openIndex === index}>
                 {item.answer}
