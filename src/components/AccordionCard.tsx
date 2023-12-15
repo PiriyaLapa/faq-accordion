@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { FAQItem } from "../data/FAQData";
 import VectorHeader from "./VectorHeader";
 import { SmallSize} from "./StyleComponents";
-import {WorkSans}from './StyleComponents';
 
 export const AccordionContainer = styled.div`
   width: 600px;
@@ -82,7 +81,7 @@ export class AccordionCard extends Component<
         <PanelContainer>
           <h1>
             <VectorHeader />
-            <WorkSans>faq<SmallSize>s</SmallSize></WorkSans>
+            faq<SmallSize>s</SmallSize>
           </h1>
           {items.map((item, index) => (
             <AccordionItem key={index}>
