@@ -2,7 +2,7 @@ import { Component, ReactNode } from "react";
 import styled from "styled-components";
 import { FAQItem } from "../data/FAQData";
 import VectorHeader from "./VectorHeader";
-import { SmallSize, WorkSans} from "./StyleComponents";
+// import { SmallSize, WorkSans} from "./StyleComponents";
 import { StyleSheetManager } from "styled-components";
 
 
@@ -30,9 +30,9 @@ const AccordionHeader = styled.div`
   font-weight: bold;
   cursor: pointer;
 `;
-const AccordionContent = styled.div<{ isOpen: boolean }>`
+const AccordionContent = styled.div<{ $isOpen: boolean }>`
   padding: 10px;
-  display: ${({ isOpen }: { isOpen: boolean }) => (isOpen ? "block" : "none")};
+  display: ${({ $isOpen }: { $isOpen: boolean }) => ($isOpen ? "block" : "none")};
 `;
 
 const PanelContainer = styled.div`
@@ -83,20 +83,19 @@ export class AccordionCard extends Component<
         <PanelContainer>
           <h1>
             <VectorHeader />
-            <WorkSans>faq</WorkSans><SmallSize>s</SmallSize>
+            {/* <WorkSans>faq</WorkSans><SmallSize>s</SmallSize> */}
+            faqs
           </h1>
-          <StyleSheetManager shouldForwardProp={(prop)=> prop !== 'isOpen'}>
           {items.map((item, index) => (
             <AccordionItem key={index}>
               <AccordionHeader onClick={() => this.toggleAccordion(index)}>
                 {item.question}
               </AccordionHeader>
-              <AccordionContent isOpen={openIndex === index}>
+              <AccordionContent $isOpen={openIndex === index}>
                 {item.answer}
               </AccordionContent>
             </AccordionItem>
           ))}
-          </StyleSheetManager>
         </PanelContainer>
       </AccordionContainer>
     );
