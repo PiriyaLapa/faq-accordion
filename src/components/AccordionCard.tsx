@@ -6,10 +6,11 @@ import VectorHeader from "./VectorHeader";
 export const AccordionContainer = styled.div`
   width: 600px;
   height: 565px;
-  position: absolute;
+  margin: 0 auto; 
+  /* position: absolute;
   top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: 50%; */
+  /* transform: translate(-50%, -50%); */
 
   background-color: white;
   border-radius: 15px;
