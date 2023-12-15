@@ -45,4 +45,5 @@ export const SmallSize = styled.p`
   position:absolute;
   top:16px;
   left:178px
+  // mark literal to be small
 `;
