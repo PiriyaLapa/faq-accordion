@@ -40,7 +40,9 @@ export const Header = styled(Container)`
 `;
 
 export const SmallSize = styled.p`
-  margin:0 auto;
   font-size: 0.6em;
   display:inline-block;
+  position:absolute;
+  top:16px;
+  left:178px
 `;
