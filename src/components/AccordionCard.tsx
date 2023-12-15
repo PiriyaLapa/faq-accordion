@@ -2,7 +2,9 @@ import { Component, ReactNode } from "react";
 import styled from "styled-components";
 import { FAQItem } from "../data/FAQData";
 import VectorHeader from "./VectorHeader";
-import { SmallSize} from "./StyleComponents";
+import { SmallSize, WorkSans} from "./StyleComponents";
+import { StyleSheetManager } from "styled-components";
+
 
 export const AccordionContainer = styled.div`
   width: 600px;
@@ -81,8 +83,9 @@ export class AccordionCard extends Component<
         <PanelContainer>
           <h1>
             <VectorHeader />
-            faq<SmallSize>s</SmallSize>
+            <WorkSans>faq</WorkSans><SmallSize>s</SmallSize>
           </h1>
+          <StyleSheetManager shouldForwardProp={(prop)=> prop !== 'isOpen'}>
           {items.map((item, index) => (
             <AccordionItem key={index}>
               <AccordionHeader onClick={() => this.toggleAccordion(index)}>
@@ -93,6 +96,7 @@ export class AccordionCard extends Component<
               </AccordionContent>
             </AccordionItem>
           ))}
+          </StyleSheetManager>
         </PanelContainer>
       </AccordionContainer>
     );
