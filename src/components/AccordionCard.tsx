@@ -7,6 +7,8 @@ export const AccordionContainer = styled.div`
   width: 600px;
   height: 565px;
   margin: 0 auto; 
+  position:relative;
+  top:-160px;
   /* position: absolute;
   top: 60%;
   left: 50%; */
