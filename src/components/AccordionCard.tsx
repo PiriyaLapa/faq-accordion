@@ -2,17 +2,14 @@ import { Component, ReactNode } from "react";
 import styled from "styled-components";
 import { FAQItem } from "../data/FAQData";
 import VectorHeader from "./VectorHeader";
-// import { SmallSize, WorkSans} from "./StyleComponents";
-// import { StyleSheetManager } from "styled-components";
-
 
 export const AccordionContainer = styled.div`
   width: 600px;
   height: 565px;
-  position:absolute;
-  top:60%;
-  left:50%;
-  transform:translate(-50%,-50%);
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
   background-color: white;
   border-radius: 15px;
@@ -32,7 +29,8 @@ const AccordionHeader = styled.div`
 `;
 const AccordionContent = styled.div<{ $isOpen: boolean }>`
   padding: 10px;
-  display: ${({ $isOpen }: { $isOpen: boolean }) => ($isOpen ? "block" : "none")};
+  display: ${({ $isOpen }: { $isOpen: boolean }) =>
+    $isOpen ? "block" : "none"};
 `;
 
 const PanelContainer = styled.div`
@@ -46,10 +44,19 @@ const PanelContainer = styled.div`
     font-weight: 700;
     line-height: 66px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    margin:0px;
+    margin: 0px;
+    display: inline-block;
 
     :nth-child(1) {
-      margin:5px 25px 5px 15px;
+      margin: 5px 25px 5px 15px;
+    }
+
+    span {
+      margin: 0px;
+      font-size: 2rem;
+      position: absolute;
+      left: 125px;
+      top: 5px;
     }
   }
 `;
@@ -57,7 +64,6 @@ const PanelContainer = styled.div`
 interface AccordionProps {
   items: FAQItem[];
 }
-
 export class AccordionCard extends Component<
   AccordionProps,
   { openIndex: number | null }
@@ -81,11 +87,12 @@ export class AccordionCard extends Component<
     return (
       <AccordionContainer>
         <PanelContainer>
-          <h1>
+          <div>
             <VectorHeader />
-            {/* <WorkSans>faq</WorkSans><SmallSize>s</SmallSize> */}
-            faqs
-          </h1>
+            <h1>
+              faq<span>s</span>
+            </h1>
+          </div>
           {items.map((item, index) => (
             <AccordionItem key={index}>
               <AccordionHeader onClick={() => this.toggleAccordion(index)}>
