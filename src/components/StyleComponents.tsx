@@ -41,10 +41,10 @@ export const Header = styled(Container)`
   }
 `;
 
-export const SmallSize = styled.span`
-  font-size: 0.6em;
-  display:inline-block;
-  position:absolute;
-  top:-23px;
-  left:180px
-`;
+// export const SmallSize = styled.span`
+//   font-size: 0.6em;
+//   display:inline-block;
+//   position:absolute;
+//   top:-23px;
+//   left:180px
+// `;

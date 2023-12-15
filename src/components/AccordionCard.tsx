@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { FAQItem } from "../data/FAQData";
 import VectorHeader from "./VectorHeader";
 // import { SmallSize, WorkSans} from "./StyleComponents";
-import { StyleSheetManager } from "styled-components";
+// import { StyleSheetManager } from "styled-components";
 
 
 export const AccordionContainer = styled.div`
