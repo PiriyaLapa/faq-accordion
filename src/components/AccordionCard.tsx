@@ -3,13 +3,17 @@ import styled from "styled-components";
 import { FAQItem } from "../data/FAQData";
 import VectorHeader from "./VectorHeader";
 import { SmallSize} from "./StyleComponents";
+import {WorkSans}from './StyleComponents';
 
 export const AccordionContainer = styled.div`
   width: 600px;
   height: 565px;
-  position: top;
+  position:absolute;
+  top:60%;
+  left:50%;
+  transform:translate(-50%,-50%);
+
   background-color: white;
-  margin: 0 auto;
   border-radius: 15px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 `;
@@ -36,15 +40,15 @@ const PanelContainer = styled.div`
   border-radius: 15px;
   h1 {
     font-style: normal;
-    font-family: "Work seri";
     text-transform: uppercase;
     font-size: 56px;
     font-weight: 700;
     line-height: 66px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin:0px;
 
     :nth-child(1) {
-      margin-right: 15px;
+      margin:5px 25px 5px 15px;
     }
   }
 `;
@@ -78,7 +82,7 @@ export class AccordionCard extends Component<
         <PanelContainer>
           <h1>
             <VectorHeader />
-            faq<SmallSize>s</SmallSize>
+            <WorkSans>faq<SmallSize>s</SmallSize></WorkSans>
           </h1>
           {items.map((item, index) => (
             <AccordionItem key={index}>
