@@ -1,9 +1,9 @@
 import styled, { createGlobalStyle } from "styled-components";
 import { ReactNode } from "react";
 
-const GlobalStyles = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Poppins&family=Roboto:wght@500&family=Ubuntu&family=Work+Sans:wght@700&display=swap');
-`;
+// const GlobalStyles = createGlobalStyle`
+//   @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Poppins&family=Roboto:wght@500&family=Ubuntu&family=Work+Sans:wght@700&display=swap');
+// `;
 interface StyleComponentProps {
   children: ReactNode;
 }
