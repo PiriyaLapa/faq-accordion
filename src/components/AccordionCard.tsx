@@ -2,19 +2,15 @@ import { Component, ReactNode } from "react";
 import styled from "styled-components";
 import { FAQItem } from "../data/FAQData";
 import VectorHeader from "./VectorHeader";
+import ButtonCircle from "./ButtonCircle";
 
 export const AccordionContainer = styled.div`
   width: 600px;
   /* height: 565px; */
-  height:auto;
+  height: auto;
   margin: 0 auto;
   position: relative;
   top: -160px;
-  /* position: absolute;
-  top: 60%;
-  left: 50%; */
-  /* transform: translate(-50%, -50%); */
-
   background-color: white;
   border-radius: 15px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -26,15 +22,19 @@ const AccordionItem = styled.div`
 `;
 
 const AccordionHeader = styled.div`
+  color: #301534;
   padding: 13px;
   background-color: #f1f1f1;
   font-weight: bold;
   cursor: pointer;
+  display:flex;
+  justify-content:space-between;
 `;
 const AccordionContent = styled.div<{ $isOpen: boolean }>`
   padding: 10px;
   display: ${({ $isOpen }: { $isOpen: boolean }) =>
     $isOpen ? "block" : "none"};
+  color: #8b6990;
 `;
 
 const PanelContainer = styled.div`
@@ -54,15 +54,16 @@ const PanelContainer = styled.div`
 `;
 
 const PanelHeader = styled.div`
-  :nth-child(1){
-    margin:5px 25px 5px 15px;
-    font-size:2rem;
-  }
-  span{
-    position:relative;
-    left:-10%;
+  color: #301534;
+  :nth-child(1) {
+    margin: 5px 25px 5px 15px;
+    font-size: 2rem;
   }
 
+  span {
+    position: relative;
+    left: -10%;
+  }
 `;
 
 interface AccordionProps {
@@ -101,7 +102,7 @@ export class AccordionCard extends Component<
             <AccordionItem key={index}>
               <AccordionHeader onClick={() => this.toggleAccordion(index)}>
                 {item.question}
-                <button type="submit">button</button>
+                <ButtonCircle />
               </AccordionHeader>
               <AccordionContent $isOpen={openIndex === index}>
                 {item.answer}
