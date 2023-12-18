@@ -1,4 +1,7 @@
 import { Component, ReactNode } from "react";
+import styled from 'styled-components';
+
+
 
 export default class ButtonCircle extends Component {
   render(): ReactNode {
