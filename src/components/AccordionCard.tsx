@@ -126,6 +126,7 @@ export class AccordionCard extends Component<
                   />
                 </SVGButton> */}
               {/* <SVGButton /> */}
+              <ButtonCircle />
               </AccordionHeader>
               <AccordionContent $isOpen={openIndex === index}>
                 {item.answer}
