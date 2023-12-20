@@ -1,7 +1,9 @@
 import { Component, ReactNode } from "react";
+import styled from 'styled-components';
 
-
-
+const svgButton = styled.svg`
+  cursor:pointer;
+`
 export default class ButtonCircle extends Component {
   render(): ReactNode {
     return (
