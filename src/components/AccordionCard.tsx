@@ -122,46 +122,46 @@ export class AccordionCard extends Component<
   }
 }
 
-// export class TestCard extends Component<
-//   AccordionProps,
-//   { openIndex: number | null }
-// > {
-//   constructor(props: AccordionProps) {
-//     super(props);
-//     this.state = {
-//       openIndex: null,
-//     };
-//   }
+export class TestCard extends Component<
+  AccordionProps,
+  { openIndex: number | null }
+> {
+  constructor(props: AccordionProps) {
+    super(props);
+    this.state = {
+      openIndex: null,
+    };
+  }
 
-//   onClick = (index: number) => {
-//     this.setState((previous) => ({
-//       openIndex: previous.openIndex === index ? null : index,
-//     }));
-//     console.log(this.state);
-//   };
+  onClick = (index: number) => {
+    this.setState((previous) => ({
+      openIndex: previous.openIndex === index ? null : index,
+    }));
+    console.log(this.state);
+  };
 
-//   render() {
-//     const { items } = this.props;
-//     const { openIndex } = this.state;
-//     return (
-//       <AccordionContainer>
-//         <PanelContainer>
-//           {items.map((item, index) => (
-//             <AccordionItem key={index}>
-//               <AccordionHeader>
-//                 {item.question}
-//                 {/* <ButtonCircle onClick={() => this.onClick(index)} /> */}
-//                 <button type="submit" onClick={() => this.onClick(index)}>
-//                   test
-//                 </button>
-//               </AccordionHeader>
-//               <AccordionContent $isOpen={openIndex === index}>
-//                 {item.answer}
-//               </AccordionContent>
-//             </AccordionItem>
-//           ))}
-//         </PanelContainer>
-//       </AccordionContainer>
-//     );
-//   }
-// }
+  render() {
+    const { items } = this.props;
+    const { openIndex } = this.state;
+    return (
+      <AccordionContainer>
+        <PanelContainer>
+          {items.map((item, index) => (
+            <AccordionItem key={index}>
+              <AccordionHeader>
+                {item.question}
+                {/* <ButtonCircle onClick={() => this.onClick(index)} /> */}
+                <button type="submit" onClick={() => this.onClick(index)}>
+                  test
+                </button>
+              </AccordionHeader>
+              <AccordionContent $isOpen={openIndex === index}>
+                {item.answer}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </PanelContainer>
+      </AccordionContainer>
+    );
+  }
+}
