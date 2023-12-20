@@ -66,9 +66,9 @@ const PanelHeader = styled.div`
   }
 `;
 
-const SVGButton= styled.svg`
-  cursor:pointer;
-`
+// const SVGButton= styled.svg`
+//   cursor:pointer;
+// `
 
 interface AccordionProps {
   items: FAQItem[];
@@ -125,7 +125,7 @@ export class AccordionCard extends Component<
                     fill={openIndex === index ? "#301534" : "#AD28EB"}
                   />
                 </SVGButton> */}
-              <SVGButton />
+              {/* <SVGButton /> */}
               </AccordionHeader>
               <AccordionContent $isOpen={openIndex === index}>
                 {item.answer}
