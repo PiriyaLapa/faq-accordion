@@ -111,7 +111,7 @@ export class AccordionCard extends Component<
             <AccordionItem key={index}>
               <AccordionHeader>
                 {item.question}
-                 <SVGButton
+                 {/* <SVGButton
                   width="26"
                   height="25"
                   viewBox="0 0 26 25"
@@ -124,7 +124,7 @@ export class AccordionCard extends Component<
                     // d={openIndex === index ? color1 : color2}
                     fill={openIndex === index ? "#301534" : "#AD28EB"}
                   />
-                </SVGButton>
+                </SVGButton> */}
               </AccordionHeader>
               <AccordionContent $isOpen={openIndex === index}>
                 {item.answer}
