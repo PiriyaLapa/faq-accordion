@@ -66,9 +66,9 @@ const PanelHeader = styled.div`
   }
 `;
 
-// const SVGButton = styled.svg`
-//   cursor: pointer;
-// `;
+const SVGButton = styled.svg`
+  cursor: pointer;
+`;
 
 interface AccordionProps {
   items: FAQItem[];
