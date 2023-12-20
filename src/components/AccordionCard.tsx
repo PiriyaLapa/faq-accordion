@@ -108,7 +108,7 @@ export class AccordionCard extends Component<
           {items.map((item, index) => (
             <AccordionItem key={index}>
               <AccordionHeader onClick={() => this.toggleAccordion(index)}>
-                {item.question} <ButtonCircle />
+                {item.question} 
               </AccordionHeader>
               <AccordionContent $isOpen={openIndex === index}>
                 {item.answer}

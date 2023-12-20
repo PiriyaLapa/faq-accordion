@@ -1,7 +1,7 @@
 
 import {Component} from 'react';
 import { Container, Header } from './components/StyleComponents';
-import { AccordionCard, TestCard } from './components/AccordionCard';
+import { AccordionCard } from './components/AccordionCard';
 import VectorLine from './components/VectorComponent';
 import { faqData} from './data/FAQData';
 
