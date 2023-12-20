@@ -109,7 +109,7 @@ export class AccordionCard extends Component<
           </PanelHeader>
           {items.map((item, index) => (
             <AccordionItem key={index}>
-              <AccordionHeader>
+              <AccordionHeader onClick={() => this.toggleAccordion(index)}>
                 {item.question}
                  {/* <SVGButton
                   width="26"
