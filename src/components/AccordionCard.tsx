@@ -2,7 +2,7 @@ import { Component, ReactNode } from "react";
 import styled from "styled-components";
 import { FAQItem } from "../data/FAQData";
 import VectorHeader from "./VectorHeader";
-// import ButtonCircle from "./ButtonCircle";
+import ButtonCircle from "./ButtonCircle";
 
 export const AccordionContainer = styled.div`
   width: 600px;
@@ -109,6 +109,7 @@ export class AccordionCard extends Component<
             <AccordionItem key={index}>
               <AccordionHeader onClick={() => this.toggleAccordion(index)}>
                 {item.question} 
+                <ButtonCircle />
               </AccordionHeader>
               <AccordionContent $isOpen={openIndex === index}>
                 {item.answer}
