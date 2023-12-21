@@ -18,10 +18,10 @@ export const AccordionContainer = styled.div`
 `;
 
 const AccordionItem = styled.div`
-  border-bottom: 1px solid #F8EEFF;
+  border-bottom: 1px solid #f8eeff;
   margin-bottom: 8px;
-  width:95%;
-  margin:0 auto;  
+  width: 95%;
+  margin: 0 auto;
 `;
 
 const AccordionHeader = styled.div`
@@ -136,8 +136,7 @@ export class AccordionCard extends Component<
 }
 const SVGButton = styled.button`
   border: none;
-  background-color:#ffff;
-  
+  background-color: #ffff;
 `;
 
 export class TestCard extends Component<
@@ -168,7 +167,6 @@ export class TestCard extends Component<
             <AccordionItem key={index}>
               <AccordionHeader>
                 {item.question}
-                {/* <ButtonCircle onClick={() => this.onClick(index)} /> */}
                 <SVGButton type="submit" onClick={() => this.onClick(index)}>
                   <svg
                     width="26"
@@ -184,7 +182,6 @@ export class TestCard extends Component<
                     />
                   </svg>
                 </SVGButton>
-                {/* <ButtonCircle onClick={() => this.onClick(index)}/> */}
               </AccordionHeader>
               <AccordionContent $isOpen={openIndex === index}>
                 {item.answer}
