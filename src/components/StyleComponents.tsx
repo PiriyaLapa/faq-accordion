@@ -15,6 +15,8 @@ export const Header = styled(Container)`
 
   * {
     margin: 0 auto;
-    width: 100%;
+    width:100%;
   }
+
+  
 `;

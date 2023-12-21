@@ -15,8 +15,8 @@ export const AccordionContainer = styled.div`
   border-radius: 15px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-  @media only screen and (min-width:376px){
-    width:89%;
+  @media only screen and (max-width:718px){
+    width:80%;
   }
 
 `;
