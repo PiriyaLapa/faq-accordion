@@ -5,7 +5,7 @@ export const Container = styled.div`
   height: 900px;
   margin: 0 auto;
   background-color: #f8eeff;
-  @media only screen and (max-width: 376px) {
+  @media only screen and (min-width: 376px) {
     background-color: #f8eeff;
   }
 `;
