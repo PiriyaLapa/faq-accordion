@@ -4,7 +4,10 @@ export const Container = styled.div`
   width: 100%;
   height: 900px;
   margin: 0 auto;
-  background-color:#F8EEFF;
+  background-color: #f8eeff;
+  @media only screen and (max-width: 376px) {
+    background-color: #f8eeff;
+  }
 `;
 export const Header = styled(Container)`
   height: 320px;
@@ -12,6 +15,6 @@ export const Header = styled(Container)`
 
   * {
     margin: 0 auto;
+    width: 100%;
   }
 `;
-
