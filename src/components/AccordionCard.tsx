@@ -2,7 +2,7 @@ import { Component, ReactNode } from "react";
 import styled from "styled-components";
 import { FAQItem } from "../data/FAQData";
 import VectorHeader from "./VectorHeader";
-import ButtonCircle from "./ButtonCircle";
+// import ButtonCircle from "./ButtonCircle";
 
 export const AccordionContainer = styled.div`
   width: 600px;
@@ -66,10 +66,6 @@ const PanelHeader = styled.div`
   }
 `;
 
-// const SVGButton = styled.svg`
-//   cursor: pointer;
-// `;
-
 interface AccordionProps {
   items: FAQItem[];
 }
@@ -109,7 +105,6 @@ export class AccordionCard extends Component<
             <AccordionItem key={index}>
               <AccordionHeader>
                 {item.question}
-                {/* <ButtonCircle /> */}
                 <SVGButton onClick={() => this.toggleAccordion(index)}>
                   <svg
                     width="26"
