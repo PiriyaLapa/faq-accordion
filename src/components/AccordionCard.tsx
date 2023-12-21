@@ -18,14 +18,16 @@ export const AccordionContainer = styled.div`
 `;
 
 const AccordionItem = styled.div`
-  border: 1px solid #ddd;
+  border-bottom: 1px solid #F8EEFF;
   margin-bottom: 8px;
+  width:95%;
+  margin:0 auto;  
 `;
 
 const AccordionHeader = styled.div`
   color: #301534;
   padding: 11px;
-  background-color: #f1f1f1;
+  /* background-color: #f1f1f1; */
   font-weight: bold;
   cursor: pointer;
   display: flex;
@@ -134,6 +136,8 @@ export class AccordionCard extends Component<
 }
 const SVGButton = styled.button`
   border: none;
+  background-color:#ffff;
+  
 `;
 
 export class TestCard extends Component<
