@@ -13,6 +13,7 @@ export default class App extends Component {
           <VectorLine />
         </Header>
         <AccordionCard items={faqData}/>
+        {/* <TestCard items={faqData} /> */}
       </Container>
     )
   }
